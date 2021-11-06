@@ -33,10 +33,7 @@ var aPassword = [];
 
 // TODO: create the function, generatePassword, move the following code in the function which will be called in writePassword
 function generatePassword () {
-  
-}
-
-  // User choices of length, special chars, upper case, lowercase alphabets, numeric chars
+    // User choices of length, special chars, upper case, lowercase alphabets, numeric chars
   // Store user choices to variables
   var userChoiceLength = prompt("Choose your password length: ");
   console.log(userChoiceLength);
@@ -63,7 +60,7 @@ function generatePassword () {
 
   if (userChoiceUpperCase) {
     userCharPool = userCharPool.concat(upperCaseCharArr);
-    console.log(userCharPool);
+    // console.log(userCharPool);
 
     // TODO: copy the one char randomly selected from this character set to the guaranteed array
 
@@ -78,11 +75,12 @@ function generatePassword () {
 
   if (userChoiceNumbers) {
     userCharPool = userCharPool.concat(numbersArr);
-    console.log(userCharPool);
+    // console.log(userCharPool);
 
     // TODO: copy the one char randomly selected from this character set to the guaranteed array
 
   };
+console.log(userCharPool);
 
   for (var i = 0; i < userChoiceLength; i++) {
     var index = Math.floor(Math.random() * userCharPool.length);
@@ -93,10 +91,11 @@ function generatePassword () {
 
   }
   console.log(aPassword);
+  writePassword();
+}
+
 
   // TODO: replace the first characters in the passwrod array with the characters in the guaranteed array
-
-  // console.log(aPassword.join(""))
 
   // TODO: convert password array to a string, then return that string to the caller, writePassword
 
@@ -113,4 +112,4 @@ function writePassword() {
 }
 
 generatePasswordIDBtn.addEventListener("click", writePassword);
-
+generatePasswordQSBtn.addEventListener("click", generatePassword);
