@@ -11,7 +11,7 @@ var generatePasswordQSBtn = document.querySelector("#generate");
 //  Numeric character set
 var specialCharStr = "`~!@#$%^&*()-_=+";
 var upperCaseLetterStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var lowerCaseChars = "abcdefghijklmnopqrstuvwxy";
+var lowerCaseChars = "abcdefghijklmnopqrstuvwxyz";
 var numbersStr = "0123456789";
 
 var specialCharArr = specialCharStr.split("");
@@ -28,7 +28,7 @@ var aPassword = [];
 // TODO: create an array variable to store the guaranteed chars - one char from each character set which user has confirmed
 
 // ================
-// MAIN RPOCESS
+// MAIN PROCESS
 // ================
 
 // TODO: create the function, generatePassword, move the following code in the function which will be called in writePassword
@@ -51,23 +51,15 @@ var aPassword = [];
   var userChoiceNumbers = confirm("Do you want numbers?");
   console.log(userChoiceNumbers);
 
-  // TODO: this function can be left here or moved to outside of the generatePassword function
-  function copyArrayToPool(arr) {
-    for (var i = 0; i < arr.length; i++) {
-      userCharPool.push(arr[i]);
-    }
-    console.log(userCharPool);
-    return;
-  }
 
   if (userChoiceSpecialChars) {
-    copyArrayToPool(specialCharArr);
+    userCharPool = userCharPool.concat(specialCharArr);
+
     // TODO: copy the one char randomly selected from this character set to the guaranteed array
 
   }
 
   if (userChoiceUpperCase) {
-    // copyArrayToPool(upperCaseCharArr);
     userCharPool = userCharPool.concat(upperCaseCharArr);
     console.log(userCharPool);
 
@@ -76,7 +68,7 @@ var aPassword = [];
   }
 
   if (userChoiceLowerCase) {
-    copyArrayToPool(lowerCaseCharArr);
+    userCharPool = userCharPool.concat(lowerCaseCharArr);
 
     // TODO: copy the one char randomly selected from this character set to the guaranteed array
 
