@@ -9,8 +9,8 @@ var generatePasswordQSBtn = document.querySelector("#generate");
 //  Upper case alphabets
 //  Lower case alphabets
 //  Numeric character set
-var specialCharStr = "~`!@$%^&*()_+-=";
-var upperCaseLetterStr = "QWERTYUIOPASDFGHJKLZXCVBNM";
+var specialCharStr = "`~!@#$%^&*()-_=+";
+var upperCaseLetterStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCaseChars = "abcdefghijklmnopqrstuvwxy";
 var numbersStr = "0123456789";
 
@@ -36,19 +36,19 @@ var aPassword = [];
 
   // User choices of length, special chars, upper case, lowercase alphabets, numeric chars
   // Store user choices to variables
-  var userChoiceLength = prompt("Enter password length: ");
+  var userChoiceLength = prompt("Choose your password length: ");
   console.log(userChoiceLength);
 
-  var userChoiceSpecialChars = confirm("Special Characters?");
+  var userChoiceSpecialChars = confirm("Do you want special characters?");
   console.log(userChoiceSpecialChars);
 
-  var userChoiceUpperCase = confirm("Upper Case?");
+  var userChoiceUpperCase = confirm("Do you want upper case letters?");
   console.log(userChoiceUpperCase);
 
-  var userChoiceLowerCase = confirm("Lover Case?");
+  var userChoiceLowerCase = confirm("Do you want lower case letters?");
   console.log(userChoiceLowerCase);
 
-  var userChoiceNumbers = confirm("Numbers?");
+  var userChoiceNumbers = confirm("Do you want numbers?");
   console.log(userChoiceNumbers);
 
   // TODO: this function can be left here or moved to outside of the generatePassword function

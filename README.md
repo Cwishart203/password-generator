@@ -4,4 +4,4 @@ This is a project to complete a password generator. The password generator shoul
 
 https://cwishart203.github.io/password-generator/
 
-![Project Screenshot](.\assets\images\passgen-preview.png)
+![Project Screenshot](./assets/images/passgen-preview.png)
