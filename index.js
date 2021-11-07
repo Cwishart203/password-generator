@@ -31,7 +31,6 @@ var aPassword = [];
 // MAIN PROCESS
 // ================
 
-// TODO: create the function, generatePassword, move the following code in the function which will be called in writePassword
 function generatePassword () {
     // User choices of length, special chars, upper case, lowercase alphabets, numeric chars
   // Store user choices to variables
@@ -53,14 +52,13 @@ function generatePassword () {
 
   if (userChoiceSpecialChars) {
     userCharPool = userCharPool.concat(specialCharArr);
-
+      
     // TODO: copy the one char randomly selected from this character set to the guaranteed array
 
   }
 
   if (userChoiceUpperCase) {
     userCharPool = userCharPool.concat(upperCaseCharArr);
-    // console.log(userCharPool);
 
     // TODO: copy the one char randomly selected from this character set to the guaranteed array
 
@@ -75,7 +73,6 @@ function generatePassword () {
 
   if (userChoiceNumbers) {
     userCharPool = userCharPool.concat(numbersArr);
-    // console.log(userCharPool);
 
     // TODO: copy the one char randomly selected from this character set to the guaranteed array
 
@@ -97,12 +94,9 @@ console.log(userCharPool);
 
   // TODO: replace the first characters in the passwrod array with the characters in the guaranteed array
 
-  // TODO: convert password array to a string, then return that string to the caller, writePassword
-
 
 function writePassword() {
   var password = aPassword.join("");
-  // var password = generatePassword();
   var passwordTextEl = document.getElementById("password");
 
   passwordTextEl.value = password;
